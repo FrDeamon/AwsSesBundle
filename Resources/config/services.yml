@@ -1,0 +1,12 @@
+# Services
+services:
+    aws_ses:
+        class: SimpleEmailService
+        arguments:
+            - %aws_ses.access_key%
+            - %aws_ses.secret_key%
+            - %aws_ses.region_endpoint%
+    aws_ses_message:
+        class: SimpleEmailServiceMessage
+        calls:
+           - [setFrom, [%aws_ses.message_from%]]
