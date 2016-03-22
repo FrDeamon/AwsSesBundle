@@ -1,7 +1,7 @@
 {
   "name": "idci/aws-ses-bundle",
   "type": "symfony-bundle",
-  "description": "A bundle that embed the php library into Symfony 2",
+  "description": "A bundle that embed the php library `php-aws-ses` from daniel-zaharie into Symfony 2",
   "keywords": ["mail","ses","amazon"],
   "license": "MIT",
   "authors": [
