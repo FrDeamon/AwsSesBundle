@@ -45,20 +45,20 @@ imports:
 then update your parameters.yml file :
 
 ```yml
-    aws_ses_access_key: ACCESS_KEY
-    aws_ses_secret_key: SECRET_KEY
-    aws_ses_region_endpoint: email.us-east-1.amazonaws.com
-    aws_ses_message_from: no-reply@mailbox.fr
+aws_ses_access_key: ACCESS_KEY
+aws_ses_secret_key: SECRET_KEY
+aws_ses_region_endpoint: email.us-east-1.amazonaws.com
+aws_ses_message_from: no-reply@mailbox.fr
 ```
 
 Or you can directly update the config.yml file like this:
 
 ```yml
-    aws_ses:
-        access_key: ACCESS_KEY
-        secret_key: SECRET_KEY
-        region_endpoint: email.us-east-1.amazonaws.com
-        message_from: no-reply@mailbox.fr
+aws_ses:
+    access_key: ACCESS_KEY
+    secret_key: SECRET_KEY
+    region_endpoint: email.us-east-1.amazonaws.com
+    message_from: no-reply@mailbox.fr
 ```
 
 Now the library is installed.
