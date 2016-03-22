@@ -38,6 +38,14 @@ class Configuration implements ConfigurationInterface
                     ->isRequired()
                     ->cannotBeEmpty()
                 ->end()
+                ->arrayNode('message_to')
+                    ->beforeNormalization()
+                        ->ifString()
+                        ->then(function ($v) { return array($v); })
+                    ->end()
+                    ->prototype('scalar')->end()
+                    ->defaultValue(array())
+                ->end()
             ->end()
         ;
 

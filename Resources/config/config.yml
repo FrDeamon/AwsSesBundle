@@ -1,5 +1,0 @@
-aws_ses:
-    access_key: %aws_ses_access_key%
-    secret_key: %aws_ses_secret_key%
-    region_endpoint: %aws_ses_region_endpoint%
-    message_from: %aws_ses_message_from%

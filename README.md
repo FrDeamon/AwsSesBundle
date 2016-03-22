@@ -32,14 +32,13 @@ public function registerBundles()
 
 Add the configuration in the config.yml file:
 
-You can either:
-
-Add this line to your config.yml file
 
 ```yml
-imports:
-    // ...
-    - { resource: @AwsSesBundle/Resources/config/config.yml }
+aws_ses:
+    access_key: %aws_ses_access_key%
+    secret_key: %aws_ses_secret_key%
+    region_endpoint: %aws_ses_region_endpoint%
+    message_from: %aws_ses_message_from%
 ```
 
 then update your parameters.yml file :
@@ -51,17 +50,24 @@ aws_ses_region_endpoint: email.us-east-1.amazonaws.com
 aws_ses_message_from: no-reply@mailbox.fr
 ```
 
-Or you can directly update the config.yml file like this:
+Now the library is installed.
+
+Optional configuration
+----------------------
+
+You can add one or several recipients by default.
 
 ```yml
 aws_ses:
-    access_key: ACCESS_KEY
-    secret_key: SECRET_KEY
-    region_endpoint: email.us-east-1.amazonaws.com
-    message_from: no-reply@mailbox.fr
+    ...
+    message_to: [user1@gmail.com, user2@gmail.com]
 ```
 
-Now the library is installed.
+```yml
+aws_ses:
+    ...
+    message_to: user@gmail.com
+```
 
 Usage
 -----

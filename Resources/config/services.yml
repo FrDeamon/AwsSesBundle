@@ -10,3 +10,4 @@ services:
         class: SimpleEmailServiceMessage
         calls:
            - [setFrom, [%aws_ses.message_from%]]
+           - [addTo, [%aws_ses.message_to%]]

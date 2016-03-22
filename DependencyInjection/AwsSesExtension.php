@@ -26,6 +26,7 @@ class AwsSesExtension extends Extension
         $container->setParameter("aws_ses.message_from", $config['message_from']);
         $container->setParameter("aws_ses.secret_key", $config['secret_key']);
         $container->setParameter("aws_ses.access_key", $config['access_key']);
+        $container->setParameter("aws_ses.message_to", $config['message_to']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
