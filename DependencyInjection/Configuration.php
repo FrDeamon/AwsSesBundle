@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @author:  Baptiste BOUCHEREAU <baptiste.bouchereau@idci-consulting.fr>
+ * @license: MIT
+ */
+
 namespace IDCI\Bundle\AwsSesBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
