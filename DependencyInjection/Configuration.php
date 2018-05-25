@@ -5,6 +5,7 @@
  * @license: MIT
  */
 
+
 namespace IDCI\Bundle\AwsSesBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -38,6 +39,18 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('region_endpoint')
                     ->isRequired()
                     ->cannotBeEmpty()
+                ->end()
+                ->scalarNode('message_from')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                ->end()
+                ->arrayNode('message_to')
+                    ->beforeNormalization()
+                        ->ifString()
+                        ->then(function ($v) { return array($v); })
+                    ->end()
+                    ->prototype('scalar')->end()
+                    ->defaultValue(array())
                 ->end()
             ->end()
         ;
